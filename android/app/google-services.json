@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165922677309",
+    "project_id": "chatapptute-7caeb",
+    "storage_bucket": "chatapptute-7caeb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165922677309:android:3f6ee7b28b83055ff9c054",
+        "android_client_info": {
+          "package_name": "com.example.chat_jasoo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0IWh87A5OSox8QRuM6O5zvxKMjjOkAhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
