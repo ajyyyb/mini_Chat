@@ -1,16 +1,39 @@
-# chat_jasoo
+# mini_Chat
 
-A new Flutter project.
+A small one-to-one chat app built with Flutter and Firebase.
 
-## Getting Started
+<img src="flutter_01.png" width="260" alt="Login screen" />
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Sign up and log in with email and password (Firebase Authentication).
+- A list of registered users (Cloud Firestore, `Users` collection).
+- A private chat between two users; messages are stored in `chat_rooms/{id}/messages` and update live.
+- Chat bubbles for your own and the other person's messages.
+- Light and dark theme switch in Settings (state kept with Provider).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter, `firebase_core`, `firebase_auth`, `cloud_firestore`, `provider`.
+
+## Project structure
+
+```text
+lib/
+  main.dart            app start, Firebase init, theme provider
+  services/auth/       auth gate, login or register, auth service
+  services/chat/       chat service (users stream, send and read messages)
+  pages/               login, register, home, settings
+  components/          text field, button, user tile, chat bubble, drawer
+  themes/              light and dark themes, theme provider
+  models/message.dart  message model
+```
+
+## Run it
+
+```bash
+flutter pub get
+flutter run
+```
+
+To use your own Firebase project, run `flutterfire configure`; it regenerates `lib/firebase_options.dart`.
