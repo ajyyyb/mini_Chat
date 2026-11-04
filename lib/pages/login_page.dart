@@ -9,7 +9,7 @@ class LoginPage extends StatefulWidget {
   const LoginPage({super.key, required this.onTap});
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixin {
@@ -69,6 +69,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
     try {
       await authServise.signInWithEmailPassword(_emailController.text, _pwController.text);
     } catch (e) {
+      if (!context.mounted) return;
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
