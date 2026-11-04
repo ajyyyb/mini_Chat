@@ -69,6 +69,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
     try {
       await authServise.signInWithEmailPassword(_emailController.text, _pwController.text);
     } catch (e) {
+      if (!context.mounted) return;
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
