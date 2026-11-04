@@ -85,7 +85,7 @@ class ChatPage extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
 
       appBar: AppBar(
         title: Text(widget.receiverEmail),
